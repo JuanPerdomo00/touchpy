@@ -1,0 +1,52 @@
+#!/bin/bash
+
+# Colors
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+YELLOW='\033[0;33m'
+NC='\033[0m' # not color
+
+trap ctrl_c INT
+
+function ctrl_c() {
+    clear
+    echo -e "\n${RED}[!] Script interrupted by $USER ${NC}"
+    exit 1
+
+}
+
+if [ "$EUID" -ne 0 ]; then 
+    echo -e "${RED}[+] Use: sudo ./install.sh${NC}"
+    exit 1
+fi
+
+install_colors() {
+    echo -e "${YELLOW}[+] Installing library${NC}"
+    pip install cansii
+}
+
+install_script() {
+    echo -e "${YELLOW}[*] Installing script${NC}"
+    sleep 2
+    clear 
+    
+    echo -e "${YELLOW}[+] Installing in path /usr/bin${NC}"
+    cp ./touchpy.py /usr/bin/touchpy
+    sleep 2
+
+    if [ -x "/usr/bin/touchpy" ]; then
+        echo -e "${GREEN}Done ... ${NC}\n"
+        echo -e "${GREEN}Use: touchpy -v for more info${NC}"
+        exit 0
+    else 
+        echo -e "${RED}[!] An error occurred...${NC}"
+        exit 1
+    fi
+}
+
+main() {
+    install_colors
+    install_script
+}
+
+main
