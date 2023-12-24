@@ -10,6 +10,12 @@ That's why touchpy was born, it is expected to add support for other files, for 
 1. Clone the repository.
 2. Navigate to the directory containing the script.
 
+## Install
+
+```bash
+sudo install
+```
+
 ### Command-Line Arguments
 
 The script accepts the following command-line arguments:
