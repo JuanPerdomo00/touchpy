@@ -24,16 +24,15 @@ The script accepts the following command-line arguments:
 
 - Create a Python file named `example.py` with the MIT license and author "John Doe":
 ```bash
-    python touchpy.py -f example.py -a "jakepy" -l gplv3
+python touchpy.py -f example.py -a "jakepy" -l gplv3
 
-    # Display the available licenses:
+# Display the available licenses:
 
-    python touchpy.py -pl
+python touchpy.py -pl
 
-    # Display version information:
+# Display version information:
 
-    python touchpy.py -v
-
+python touchpy.py -v
 ```                
 
 ### Video Example 
