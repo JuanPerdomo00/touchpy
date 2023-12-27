@@ -28,7 +28,7 @@ The script accepts the following command-line arguments:
 
 ### Examples
 
-- Create a Python file named `example.py` with the MIT license and author "John Doe":
+- Create a Python file named `example.py` with the MIT license and author "jakepy":
 ```bash
 python touchpy.py -f example.py -a "jakepy" -l gplv3
 
