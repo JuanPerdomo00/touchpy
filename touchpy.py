@@ -18,7 +18,7 @@
 #    along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 __author__ = "Jakepys Perdomo"
-__version__ = '1.0'
+__version__ = '1.1'
 
 import sys
 import re
@@ -202,9 +202,9 @@ def list_licenses():
 
 def create_file(filename: str, author: str = None, license_text: str = None) -> None:
     lines = [
-        '#==Generate By touchpy==\n\n'
         '#!/usr/bin/python3\n',
         '# -*- coding: utf-8 -*-\n',
+        '# === Generate By Touchpy ===\n',
         license_text]
 
     if re.match(r".+\.py", filename):
