@@ -156,7 +156,7 @@ class LICENSE:
 
 def version() -> None:
     '''Print Version'''
-    print(c.bold(f'''\r1.0 touchpy \n
+    print(c.bold(f'''\r{__version__} touchpy \n
                     \rCopyright (C) 2023 Free Software.
                     \rLicense GPLv3 GNU GPL version 3 <https://gnu.org/licenses/gpl.html>.
                     \rThis is free software
