@@ -13,7 +13,8 @@ That's why touchpy was born, it is expected to add support for other files, for 
 ## Install
 
 ```bash
-sudo install
+chmod a+x install
+sudo ./install
 ```
 
 ### Command-Line Arguments
